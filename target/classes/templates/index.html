@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="5" cellpadding="5" cellspacing="1">
+    <tr>
+        <td>编号</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>年龄</td>
+        <td>等级</td>
+        <td>部门</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="person:${personList}">
+        <td th:text="${person.getId()}"></td>
+        <td th:text="${person.getName()}"></td>
+        <td th:text="(${person.getGender()}==1)?'男':'女'"></td>
+        <td th:text="${person.getAge()}"></td>
+        <td th:text="${person.getRank()}"></td>
+        <td th:text="${person.getDepartment()}"></td>
+      <td><a val="${person.getId()}" th:href="@{/person/delete(id=${person.id})}">删除</a></td>
+    </tr>
+</table>
+<a th:href="@{/person/add}">添加人员</a>
+</body>
+</html>

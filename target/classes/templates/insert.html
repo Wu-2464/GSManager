@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--<script type="text/javascript" src="/GSManager/js/jquery-1.12.4.js"></script>-->
+<body>
+<h1>添加人员</h1>
+    <form action="in">
+            姓名:<input type="text" name="name" id="name"><br>
+            性别:<input type="text" name="gender" id="gender"><br>
+            年龄:<input type="text" name="age" id="age"><br>
+            等级:<input type="text" name="rank" id="rank"><br>
+            部门:<input type="text" name="department" id="department"><br>
+            <input type="submit" value="提交"/>
+    </form>
+<!--<script type="text/javascript">
+     var name = $("#name").val();
+     var gender = $("#gender").val();
+     var age = $("#age").val();
+     var rank = $("#rank").val();
+     var department = $("#department").val();
+
+     if(name.length==0){
+        alert("名字不能为空");
+    }else if(gender.length==0){
+        alert("性别不能为空");
+    }else if(age.length==0){
+        alert("年龄不能为空");
+    }else if(rank.length==0){
+        alert("等级不能为空");
+    }else{
+        alert("部门不能为空");
+    }
+</script>-->
+</body>
+</html>
